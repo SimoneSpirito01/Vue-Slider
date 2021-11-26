@@ -133,7 +133,7 @@
     height: 19%;
     cursor: pointer;
     border-radius: 20px;
-    display: none;
+    display: block;
 }
 
 .mignatur img {
