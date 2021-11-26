@@ -38,7 +38,7 @@
                 <!-- /dot -->
                 <div class="dots">
 
-                    <div v-for="(dot, i) in images" class="dot" :class="(i == activeImage) ? 'active-min' : '' "></div>
+                    <div v-for="(dot, i) in images" class="dot" :class="(i == activeImage) ? 'active-min' : '' " @click="activeImage = i"></div>
     
                 </div>
                 <!-- /dots -->
@@ -57,7 +57,7 @@
                     </div>
                     <!-- /frecce -->
     
-                    <div v-for="(mignatur, i) in images" class="mignatur" :class="(i == activeImage) ? 'active-min' : '' ">
+                    <div v-for="(mignatur, i) in images" class="mignatur" :class="(i == activeImage) ? 'active-min' : '' " @click="activeImage = i">
                         <img class="min-img" :src="mignatur.url" alt="mignatur.title">
                    </div>
     

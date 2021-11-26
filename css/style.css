@@ -134,6 +134,7 @@
     cursor: pointer;
     border-radius: 20px;
     display: block;
+    opacity: 0.6;
 }
 
 .mignatur img {
@@ -141,7 +142,6 @@
     height: 100%;
     display: block;
     border-radius: 20px;
-    opacity: 0.7;
     background-color: black;
 }
 
@@ -151,11 +151,15 @@
     background-color: white;
 }
 
-.mignatur img:hover {
-    opacity: 0.8;
+.mignatur:not(.active-min) img:hover {
     border: 2px solid black;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
+
+.mignatur:not(.active-min):hover {
+    opacity: 0.8;
+}
+
 
 @media (max-width: 768px){
 
