@@ -28,7 +28,8 @@ const app = new Vue({
                 text: 'Lorem ipsum',
             }
         ],
-        activeImage : 0
+        activeImage : 0,
+        autoPlayId: ''
     },
     methods: {
         prevImage : function(){
@@ -38,7 +39,10 @@ const app = new Vue({
             (this.activeImage == this.images.length - 1) ? this.activeImage = 0 : this.activeImage++
         },
         autoPlay: function(){
-            setInterval(this.nextImage, 3000);
+            this.autoPlayId = setInterval(this.nextImage, 1000);
+        },
+        pauseAutoPlay: function(){
+            clearInterval(this.autoPlayId);
         }
     },
     mounted() {
