@@ -37,5 +37,11 @@ const app = new Vue({
         nextImage : function(){
             (this.activeImage == this.images.length - 1) ? this.activeImage = 0 : this.activeImage++
         },
+        autoPlay: function(){
+            setInterval(this.nextImage, 3000);
+        }
+    },
+    mounted() {
+        this.autoPlay()
     }
 })
